@@ -24,7 +24,6 @@
  * Woo: 18619:d55b4f852872025741312839f142447e
  * WC requires at least: 4.0
  * WC tested up to: 4.4
- * Network:      true
  * Requires WP:  5.5
  * Requires PHP: 7.3
  *
