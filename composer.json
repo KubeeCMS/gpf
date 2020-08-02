@@ -2,7 +2,7 @@
     "name": "kubeecms/gpf",
     "description": "allows you to more easily populate advanced attributes into the Google Merchant Centre feed!",
     "keywords": ["kcms-gpf", "gpf", "kubee", "kcms", "kubee-kcms", "administration", "menu"],
-    "type": "wordpress-muplugin",
+    "type": "wordpress-plugin",
     "homepage": "https://github.com/KubeeCMS/gpf/",
     "license": "GPL-2.0-or-later",
     "authors": [
