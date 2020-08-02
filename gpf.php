@@ -11,7 +11,7 @@
  * @link         https://github.com/KubeeCMS/
  *
  * @wordpress-plugin
- * Plugin Name:  KCMS Toolbar
+ * Plugin Name:  Google Product Feed
  * Plugin URI:   https://github.com/KubeeCMS/gpf/
  * Description:  allows you to more easily populate advanced attributes into the Google Merchant Centre feed.
  * Version:      9.0.1
