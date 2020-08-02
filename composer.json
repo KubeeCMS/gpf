@@ -1,0 +1,143 @@
+{
+    "name": "kubeecms/gpf",
+    "description": "allows you to more easily populate advanced attributes into the Google Merchant Centre feed!",
+    "keywords": ["kcms-gpf", "gpf", "kubee", "kcms", "kubee-kcms", "administration", "menu"],
+    "type": "wordpress-plugin",
+    "homepage": "https://github.com/KubeeCMS/gpf/",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "KubeeCMS",
+        "homepage": "https://github.com/KubeeCMS/KCMS",
+        "role": "Developer"
+      }
+    ],
+    "support": {
+      "issues": "https://github.com/KubeeCMS/gpf/issues/",
+      "source": "https://github.com/KubeeCMS/gpf/"
+    },
+    "autoload": {
+        "psr-4": {
+          "Roots\\": "src/"
+        },
+        "classmap": [
+            "./src/woocommerce-product-feeds-main.php",
+    
+            "./src/common/gamajo-template-loader.class.php",
+            "./src/common/woocommerce-gpf-debug-service.php",
+            "./src/common/woocommerce-gpf-import-export-integration.php",
+            "./src/common/woocommerce-gpf-rest-api.php",
+            "./src/common/woocommerce-gpf-status-report.php",
+            "./src/common/woocommerce-gpf-template-loader.class.php",
+            "./src/common/woocommerce-product-feeds-integration-manager.php",
+            "./src/common/woocommerce-product-feeds-term-depth-repository.php",
+    
+            "./src/cache/woocommerce-gpf-cache.php",
+            "./src/cache/woocommerce-gpf-abstract-cache-rebuild-job.php",
+            "./src/cache/woocommerce-gpf-abstract-cache-rebuild-batch-job.php",
+            "./src/cache/woocommerce-gpf-cache-clear-all-job.php",
+            "./src/cache/woocommerce-gpf-cache-invalidator.php",
+            "./src/cache/woocommerce-gpf-cache-rebuild-complex-job.php",
+            "./src/cache/woocommerce-gpf-cache-rebuild-product-job.php",
+            "./src/cache/woocommerce-gpf-cache-rebuild-simple-job.php",
+            "./src/cache/woocommerce-gpf-cache-status.php",
+    
+            "./src/gpf/woocommerce-gpf-admin.php",
+            "./src/gpf/woocommerce-gpf-common.php",
+            "./src/gpf/woocommerce-gpf-feed.php",
+            "./src/gpf/woocommerce-gpf-feed-bing.php",
+            "./src/gpf/woocommerce-gpf-feed-google.php",
+            "./src/gpf/woocommerce-gpf-feed-google-inventory.php",
+            "./src/gpf/woocommerce-gpf-feed-google-local-products.php",
+            "./src/gpf/woocommerce-gpf-feed-google-local-product-inventory.php",
+            "./src/gpf/woocommerce-gpf-feed-item.php",
+            "./src/gpf/woocommerce-gpf-frontend.php",
+            "./src/gpf/woocommerce-gpf-structured-data.php",
+            "./src/gpf/woocommerce-gpf-template-tags.php",
+    
+            "./src/prf/woocommerce-prf-admin.php",
+            "./src/prf/woocommerce-prf-google.php",
+            "./src/prf/woocommerce-prf-google-review-feed.php",
+            "./src/prf/woocommerce-prf-google-review-product-info.php",
+    
+            "./src/integrations/woocommerce-cost-of-goods.php",
+            "./src/integrations/woocommerce-gpf-the-content-protection.php",
+            "./src/integrations/woocommerce-gpf-multicurrency.php",
+            "./src/integrations/woocommerce-min-max-quantities.php",
+            "./src/integrations/woocommerce-product-vendors.php",
+            "./src/integrations/yoast-woocommerce-seo.php",
+    
+            "tests/unit/WoocommerceGpfTestAbstract.php",
+            "tests/unit/mocks/WoocommerceGpfWcMocks.php",
+            "tests/unit/mocks/WoocommerceGpfWpMocks.php",
+            "tests/unit/mocks/WoocommerceGpfMocks.php",
+            "tests/unit/mocks/MockWpPost.php",
+            "tests/unit/mocks/MockWpTaxonomy.php",
+            "tests/unit/mocks/MockWpTerm.php",
+            "tests/unit/mocks/MockWcProduct.php",
+            "tests/unit/mocks/MockWoocommerceGpfCommon.php"
+        ],
+        "files": [
+          "src/helpers.php"
+        ]
+      },
+      "autoload-dev": {
+        "psr-4": {
+          "Roots\\Acorn\\Tests\\": "tests"
+        }
+      },
+    "require": {
+        "php": "^7.2.5",
+        "ext-json": "*",
+        "illuminate/cache": "^7.0",
+        "illuminate/config": "^7.0",
+        "illuminate/console": "^7.0",
+        "illuminate/container": "^7.0",
+        "illuminate/contracts": "^7.0",
+        "illuminate/events": "^7.0",
+        "illuminate/filesystem": "^7.0",
+        "illuminate/http": "^7.12",
+        "illuminate/log": "^7.0",
+        "illuminate/support": "^7.0",
+        "illuminate/view": "^7.0",
+        "league/flysystem": "^1.0",
+        "roots/support": "dev-master",
+        "symfony/error-handler": "^5.0",
+        "symfony/var-dumper": "^5.0",
+        "woocommerce/action-scheduler": "^3.1",
+        "pimple/pimple": "^3.2"
+    },
+    "config": {
+        "platform": {
+            "php": "7.2.5"
+        },
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+    "lint": [
+      "phpcs --ignore=vendor,tests --extensions=php --standard=PSR12 ."
+    ],
+    "test": [
+      "phpunit"
+    ],
+    "coverage": [
+      "phpunit --coverage-html coverage"
+    ]
+    },    
+    "require-dev": {
+        "filp/whoops": "^2.7",
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^8.5",
+        "roave/security-advisories": "dev-master",
+        "10up/wp_mock": "0.3.0",
+        "squizlabs/php_codesniffer": "^3.5",
+        "wp-coding-standards/wpcs": "^2.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+        "phpmd/phpmd": "^2.8"
+    }
+  }
+
